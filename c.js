@@ -324,7 +324,7 @@ function MultiplyString(num, str){
 
 function SelectAllClicked(){
 
-
+  Process();
 
   if(!!document.selection && !!document.selection.empty) {
 
@@ -371,7 +371,8 @@ function SelectAllClicked(){
   else
 
     window.getSelection().addRange(range);
-
+    
+  document.execCommand('copy');
 }
 
 function LinkToJson(){
