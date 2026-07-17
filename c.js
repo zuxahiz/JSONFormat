@@ -17,7 +17,7 @@ function Process(){
   var html = "";
   try{
     if(json == "") json = "\"\"";
-    var obj = eval("["+json+"]");
+    var obj = JSON.parse("["+json+"]");
     html = ProcessObject(obj[0], 0, false, false, false);
     $id("Canvas").innerHTML = "<PRE class='CodeContainer'>"+html+"</PRE>";
   }catch(e){
